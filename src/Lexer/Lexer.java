@@ -71,7 +71,9 @@ public class Lexer {
     }
 
     public static void main(String[] args) {
-        String input = "int\tmain\t(\tvoid)\t{\treturn\t0\t;\t}";
+        String input = "int main(void) {\n" + //
+                "    return 2;\n" + //
+                "}";
         Lexer lexer = new Lexer(input);
         List<Token> tokens = lexer.tokenize();
         for (Token token : tokens) {
